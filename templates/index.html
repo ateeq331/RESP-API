@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Prediction Form</h2>
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+{% endif %}
+    <form action="/predict" method="post">
+        <label for="Gender">Gender:</label><br>
+        <input type="text" id="Gender" name="Gender" required><br>
+        <label for="Age">Age:</label><br>
+        <input type="text" id="Age" name="Age" required><br>
+        <label for="Diagnosis Age">Diagnosis Age:</label><br>
+        <input type="text" id="Diagnosis Age" name="Diagnosis Age" required><br>
+        <label for="Blood Group">Blood Group:</label><br>
+        <input type="text" id="Blood Group" name="Blood Group" required><br>
+        <label for="Birth Order">Birth Order:</label><br>
+        <input type="text" id="Birth Order" name="Birth Order" required><br>
+        <label for="Marital Status">Marital Status:</label><br>
+        <input type="text" id="Marital Status" name="Marital Status" required><br>
+        <label for="Lifestyle">Lifestyle:</label><br>
+        <input type="text" id="Lifestyle" name="Lifestyle" required><br>
+        <label for="Weight">Weight:</label><br>
+        <input type="text" id="Weight" name="Weight" required><br>
+        <label for="Obesity">Obesity:</label><br>
+        <input type="text" id="Obesity" name="Obesity" required><br>
+        <label for="Obesity In Family">Obesity In Family:</label><br>
+        <input type="text" id="Obesity In Family" name="Obesity In Family" required><br>
+        <label for="Fast Food">Fast Food:</label><br>
+        <input type="text" id="Fast Food" name="Fast Food" required><br>
+        <label for="Smoking">Smoking:</label><br>
+        <input type="text" id="Smoking" name="Smoking" required><br>
+        <label for="High BP">High BP:</label><br>
+        <input type="text" id="High BP" name="High BP" required><br>
+        <label for="Diabetes">Diabetes:</label><br>
+        <input type="text" id="Diabetes" name="Diabetes" required><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
